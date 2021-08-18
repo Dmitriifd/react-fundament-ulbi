@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 
-const Counter = () => {
+const Counter = function () {
     const [count, setCount] = useState(0)
 
-    function increment(params) {
+    function increment() {
         setCount(count + 1)
     }
-    function decrement(params) {
+
+    function decrement() {
         setCount(count - 1)
     }
 
     return (
         <div>
             <h1>{count}</h1>
-            <button className="btn" onClick={increment}>+</button>
-            <button className="btn" onClick={decrement}>-</button>
+            <button onClick={increment}>Increment</button>
+            <button onClick={decrement}>Decrement</button>
         </div>
     )
 }
-
 
 export default Counter;
